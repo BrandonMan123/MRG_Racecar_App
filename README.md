@@ -26,10 +26,10 @@ The app publishes [joy messages](https://wiki.ros.org/joy) and string messages a
  
  * Debug publisher
    - If your robot doesn't move after being connected, this publisher publishes strings indicating what directional buttons were pressed:
-  - Up button: "Up button pressed"
-  - Down button: "Down button pressed"
-  - Left button: "Left button pressed"
-  - Right button: "Right button pressed"
+   - Up button: "Up button pressed"
+   - Down button: "Down button pressed"
+   - Left button: "Left button pressed"
+   - Right button: "Right button pressed"
 
 * April Tag publisher
   - Sends string messages to the april tag topic. It can be used for any purpose. It publishes messages when the publish message is clicked on the controller screen.
