@@ -7,7 +7,7 @@ An app that can teleoperate a racecar or serve as a joy controller for ROS purpo
 * ROSbridge
 
 # How to use
-1. Get rosbridge on your robot
+1. Get [rosbridge](https://github.com/RobotWebTools/rosbridge_suite) on your robot
 2. Open a command terminal and type: 
 ```
 roslaunch rosbridge_server rosbridge_websocket.launch
@@ -18,4 +18,5 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 128.31.38.17:9090
 6. If the connect button turns green, then you've successfully established connection. Otherwise, something is wrong with the connection.
 
-# Features
+# Messages published
+The app publishes joy messages from 
