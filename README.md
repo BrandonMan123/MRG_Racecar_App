@@ -34,4 +34,12 @@ The app publishes [joy messages](https://wiki.ros.org/joy) and string messages a
 * April Tag publisher
   - Sends string messages to the april tag topic. It can be used for any purpose. It publishes messages when the publish message is clicked on the controller screen.
 
+# Changing topics to publish 
+You can change topics to publish from the 'Publishers and Subscribers' tab. However, this can only be done when you are disconnected from your robot. As of now, you will have to manually input the topics you want every time you quit and reopen the app.
+
+# Author
+Brandon Man, brandonkingyiuman@gmail.com
+research intern at MIT CSAIL
+
+
 
