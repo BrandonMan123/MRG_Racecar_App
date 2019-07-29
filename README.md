@@ -41,5 +41,9 @@ You can change topics to publish from the 'Publishers and Subscribers' tab. Howe
 Brandon Man, brandonkingyiuman@gmail.com
 research intern at MIT CSAIL
 
+# Acknowledgements
+I used [RBS Manager](https://github.com/wesgood/RBSManager) to make this project. 
 
+# License
+The MRG Racecar App is available under the MIT license. See the LICENSE file for more info.
 
