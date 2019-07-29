@@ -1,5 +1,5 @@
 # MRG_Racecar_App
-An app that can teleoperate a racecar or serve as a joy controller for ROS purposes
+An app that can teleoperate a racecar or serve as a joy controller for ROS purposes. It publishes joy messages and string messages and also recieves Int32 messages. The joy messages published are based off the Logitech Wireless Gamepad F710 (DirectInput Mode).
 
 # Requirements
 * Swift 4
@@ -51,6 +51,12 @@ This app subscribes to a topic with the Int32 message type. It is used to genera
 
 # Changing topics to publish 
 You can change topics to publish from the 'Publishers and Subscribers' tab. However, this can only be done when you are disconnected from your robot. As of now, you will have to manually input the topics you want every time you quit and reopen the app.
+
+# Toggle buttons
+On the robot controller screen, you can toggle between 'Off', 'Teleop' and 'Auto'. They publish the following joy.button messages:
+Off:    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Teleop: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+Auto:   [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
 
 # Author
 Brandon Man, brandonkingyiuman@gmail.com
