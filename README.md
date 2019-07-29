@@ -7,7 +7,7 @@ An app that can teleoperate a racecar or serve as a joy controller for ROS purpo
 * ROSbridge
 
 # How to use
-1. Get [rosbridge](https://github.com/RobotWebTools/rosbridge_suite) on your robot
+1. Get [rosbridge](https://github.com/RobotWebTools/rosbridge_suite) on your robot 
 2. Open a command terminal and type: 
 ```
 roslaunch rosbridge_server rosbridge_websocket.launch
@@ -16,7 +16,19 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 4. Open the app
 5. Click on the host button. Input the IP Adress of your wifi followed by a colon and the port rosbridge is connected to. The default port rosbridge connects to is 9090, which you can edit in the launch file. Below is an example:
 128.31.38.17:9090
-6. If the connect button turns green, then you've successfully established connection. Otherwise, something is wrong with the connection.
+6. If the connect button turns green, then you've successfully established connection. Otherwise, something is wrong with the connection. If it fails with the following error:
+```
+Problem of md5sum warning when web is refreshed 
+```
+Comment out lines 321-325 in [rosbridge_library/pulibhser.py](https://github.com/RobotWebTools/rosbridge_suite/blob/develop/rosbridge_library/src/rosbridge_library/internal/publishers.py):
+```
+    def _unregister_impl(self, topic):
+        if not self._publishers[topic].has_clients():
+            self._publishers[topic].unregister()
+            del self._publishers[topic]
+        del self.unregister_timers[topic]
+```
+More info can be found here: https://github.com/RobotWebTools/rosbridge_suite/issues/138
 
 # Messages published
 The app publishes [joy messages](https://wiki.ros.org/joy) and string messages and also recieves Int32 messages. The app has three publishers total, each having a different function.
@@ -33,6 +45,9 @@ The app publishes [joy messages](https://wiki.ros.org/joy) and string messages a
 
 * April Tag publisher
   - Sends string messages to the april tag topic. It can be used for any purpose. It publishes messages when the publish message is clicked on the controller screen.
+
+# Subscribing topics
+This app subscribes to a topic with the Int32 message type. It is used to generate april tags, which can be viewed in the april tags tab. 
 
 # Changing topics to publish 
 You can change topics to publish from the 'Publishers and Subscribers' tab. However, this can only be done when you are disconnected from your robot. As of now, you will have to manually input the topics you want every time you quit and reopen the app.
