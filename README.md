@@ -6,6 +6,13 @@ An app that can teleoperate a racecar or serve as a joy controller for ROS purpo
 * iOS 8+
 * ROSbridge
 
+# Installation
+1. Clone the repository
+2. Go to the project's directory and type:
+```
+pod install
+```
+
 # How to use
 1. Get [rosbridge](https://github.com/RobotWebTools/rosbridge_suite) on your robot 
 2. Open a command terminal and type: 
@@ -46,24 +53,24 @@ The app publishes [joy messages](https://wiki.ros.org/joy) and string messages a
 * April Tag publisher
   - Sends string messages to the april tag topic. It can be used for any purpose. It publishes messages when the publish message is clicked on the controller screen.
 
-# Subscribing topics
-This app subscribes to a topic with the Int32 message type. It is used to generate april tags, which can be viewed in the april tags tab. 
+# Detecting April Tags
+This app subscribes to a topic with the Int32 message type. It is used to generate a log of april tags, which can be viewed in the april tags tab. More information on April Tags here: https://april.eecs.umich.edu/software/apriltag.html
 
 # Changing topics to publish 
 You can change topics to publish from the 'Publishers and Subscribers' tab. However, this can only be done when you are disconnected from your robot. As of now, you will have to manually input the topics you want every time you quit and reopen the app.
 
 # Toggle buttons
 On the robot controller screen, you can toggle between 'Off', 'Teleop' and 'Auto'. They publish the following joy.button messages:
-Off:    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-Teleop: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-Auto:   [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+1. Off:    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2. Teleop: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+3. Auto:   [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
 
 # Author
 Brandon Man, brandonkingyiuman@gmail.com
-research intern at MIT CSAIL
+Research intern at MIT CSAIL, student at Cate School, CA
 
 # Acknowledgements
-I used [RBS Manager](https://github.com/wesgood/RBSManager) to make this project. 
+I used [RBS Manager](https://github.com/wesgood/RBSManager) for this project. Thanks goes to @wesgood for creating RBS Manager.
 
 # License
 The MRG Racecar App is available under the MIT license. See the LICENSE file for more info.
