@@ -1,3 +1,5 @@
+THIS REPO IS NOT FUNCTIONAL, PLEASE REFER TO [THIS REPOSITORY](https://github.com/BrandonMan123/MRG-Racecar-App) INSTEAD
+
 # MRG_Racecar_App
 An app that can teleoperate a racecar or serve as a joy controller for ROS purposes. It publishes joy messages and string messages and also recieves Int32 messages. The joy messages published are based off the Logitech Wireless Gamepad F710 (DirectInput Mode).
 
