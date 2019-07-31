@@ -23,7 +23,7 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 4. Open the app
 5. Click on the host button. Input the IP Adress of your wifi followed by a colon and the port rosbridge is connected to. The default port rosbridge connects to is 9090, which you can edit in the launch file. Below is an example:
 123.45.67.89:9090
-6. If the connect button turns green, then you've successfully established connection. Otherwise, something is wrong with the connection. If it fails with the following error:
+6. If the connect button turns red, then you've successfully established connection. Otherwise, something is wrong with the connection. If it fails with the following error:
 ```
 Problem of md5sum warning when web is refreshed 
 ```
