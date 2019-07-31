@@ -6,7 +6,7 @@ An app that can teleoperate a racecar or serve as a joy controller for ROS purpo
 * iOS 8+
 * ROSbridge
 
-# Installation
+# Installation (For Mac)
 1. Clone the repository
 2. Go to the project's directory and type:
 ```
