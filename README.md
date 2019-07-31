@@ -14,7 +14,7 @@ pod install
 ```
 
 # How to use
-1. Get [rosbridge](https://github.com/RobotWebTools/rosbridge_suite) on your robot 
+1. Get [rosbridge](https://github.com/RobotWebTools/rosbridge_suite) on your robot by cloning the rosbridge repository
 2. Open a command terminal and type: 
 ```
 roslaunch rosbridge_server rosbridge_websocket.launch
@@ -36,7 +36,7 @@ Comment out lines 321-325 in [rosbridge_library/pulibhser.py](https://github.com
         del self.unregister_timers[topic]
 ```
 More info can be found here: https://github.com/RobotWebTools/rosbridge_suite/issues/138
-
+7. To actually use the app, you will have to launch the file you use for your robot
 # Messages published
 The app publishes [joy messages](https://wiki.ros.org/joy) and string messages and also recieves Int32 messages. The app has three publishers total, each having a different function.
  * Racecar publisher
